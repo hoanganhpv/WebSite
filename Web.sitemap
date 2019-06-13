@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="" title="TRANG CHỦ"  description="">
+    <siteMapNode url="~/TrangChu.aspx" title="TRANG CHỦ"  description="" />
+   
+  <siteMapNode url="~/Nike.aspx" title="GIÀY NIKE" description="">
+      <siteMapNode url="~/Nike_Jordan.aspx" title="NIKE JORDAN"  description="" />
+      <siteMapNode url="~/Nike_AirForce.aspx" title="NIKE AIR FORCE"  description="" />
+  </siteMapNode>
+  
+  <siteMapNode url="~/Adidas.aspx" title="GIÀY ADIDAS" description="">
+      <siteMapNode url="~/Adidas_Yeezy.aspx" title="ADIDAS YEEZY"  description=""/>
+  </siteMapNode>
+    
+  <siteMapNode url="~/Content.aspx" title="GIÀY VANS"  description=""/>
+  <siteMapNode url="~/lienhe.aspx" title="ĐẶT MUA"  description=""/>
+    <siteMapNode url="~/QuanLy/Donhang.aspx" title="(QLĐH)"  description=""/>
+  
+  </siteMapNode>
+
+</siteMap>

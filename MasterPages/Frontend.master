@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Frontend.master.cs" Inherits="MasterPages_Frontend" %>
+
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script src="../Scripts/modernizr-custom.min.js"></script>
+    <style type="text/css">
+        #form1 {
+            height: 303px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true">
+            <Scripts>
+                <asp:ScriptReference Name="jquery" />
+            </Scripts>
+        </asp:ScriptManager>
+        <div id="PageWrapper">
+            <header> <a href="/"></a> 
+                <asp:DropDownList ID="ThemeList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ThemeList_SelectedIndexChanged1">
+                    <asp:ListItem>Light </asp:ListItem>
+                    <asp:ListItem>Dark</asp:ListItem>
+                </asp:DropDownList>
+
+            </header>
+            <nav>
+                
+                <asp:Menu ID="Menu1" runat="server" CssClass="MainMenu" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" StaticEnableDefaultPopOutImage="False"></asp:Menu>
+                
+               
+            </nav>
+            <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" ShowExpandCollapse="False" CssClass="MenuSecond">
+                   <LevelStyles>
+                       <asp:TreeNodeStyle CssClass="FirstLevelMenuItems" />
+                   </LevelStyles>
+               </asp:TreeView>
+                 <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+
+            <section id="MainContent">
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath><br /><br />
+               <section style="width:750px; float:left;">
+            <asp:ContentPlaceHolder ID="cpMainContent" runat="server"></asp:ContentPlaceHolder>
+
+        </section>
+            </section>
+            <aside id="Sidebar">
+               
+                <br />
+                <br />
+                <br />
+                
+            </aside>
+            <footer>
+                <div id="footer">
+                <div class="footer">
+                    <h2>ĐỊA CHỈ MUA HÀNG</h2>
+                         <p>CÔNG TY CỔ PHẦN SẢN XUẤT VÀ KINH DOANH PHÚ QUÝ<br />
+                          Mã số thuế : 0107779484<br />
+                         Điện Thoại: 0466757025<br /> 
+                         Di động: 0984152513<br />
+                         Địa Chỉ: 908/22 Đường Kim Giang - Thanh Liệt - Thanh Trì - Hà Nội<br />
+                         Email: Infogiaydep24@gmail.com</p>    
+                 </div>
+                <div class="footer">
+                     <h2>HỖ TRỢ MUA HÀNG</h2>
+                     <p>Phương thức vận chuyển<br />
+                        Chính sách bảo mật<br />
+                        Chính sách đổi trả hàng</p>
+                 </div>
+                    </div>
+                        
+    </footer>
+
+        </div>
+    </form>
+</body>
+</html>
